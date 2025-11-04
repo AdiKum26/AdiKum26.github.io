@@ -35,17 +35,17 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+        <div className="text-center mb-16 md:mb-20 animate-fade-in">
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full" />
         </div>
 
         {/* Story Section */}
-        <div className="max-w-4xl mx-auto mb-20 space-y-6 text-lg text-muted-foreground leading-relaxed animate-fade-in-up">
+        <div className="max-w-4xl mx-auto mb-20 space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-in-up">
           <p>
             I was born in India, raised in South Africa, and now call Seattle home. My journey has been shaped by 
             <span className="text-foreground font-semibold"> Ubuntu </span>

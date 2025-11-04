@@ -53,16 +53,16 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 bg-background">
+    <section id="experience" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+        <div className="text-center mb-16 md:mb-20 animate-fade-in">
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
             Experience
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Building impactful solutions across AI, data engineering, and full-stack development
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full mt-4" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full mt-6" />
         </div>
 
         <div className="max-w-5xl mx-auto space-y-8">
