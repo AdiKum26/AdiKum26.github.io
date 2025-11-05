@@ -71,7 +71,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button 
-              onClick={() => window.open('/Aditya_Kumar_Resume.pdf', '_blank')}
+              onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya_Kumar_Resume.pdf`, '_blank')}
               className={`h-11 px-6 font-semibold rounded-lg shadow-lg transition-all ${
                 isScrolled
                   ? "bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white"

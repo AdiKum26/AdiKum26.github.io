@@ -153,7 +153,7 @@ const Contact = () => {
               </p>
               <Button 
                 className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90"
-                onClick={() => window.open('/Aditya_Kumar_Resume.pdf', '_blank')}
+                onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya_Kumar_Resume.pdf`, '_blank')}
               >
                 <Send className="mr-2 h-5 w-5" />
                 Download Resume

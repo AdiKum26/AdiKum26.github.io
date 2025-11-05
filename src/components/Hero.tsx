@@ -61,7 +61,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="h-14 px-8 bg-transparent text-white border-2 border-white/30 hover:bg-white/10 hover:border-white font-semibold text-base shadow-xl backdrop-blur-sm rounded-xl"
-                onClick={() => window.open('/Aditya_Kumar_Resume.pdf', '_blank')}
+                onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya_Kumar_Resume.pdf`, '_blank')}
               >
                 <Download className="mr-2 h-5 w-5" />
                 Resume
