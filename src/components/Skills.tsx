@@ -79,7 +79,7 @@ const Skills = () => {
           {[
             { number: "3.87", label: "GPA (Dean's List)" },
             { number: "5K+", label: "App Downloads" },
-            { number: "200K+", label: "Records Analyzed" },
+            { number: "2M+", label: "Records Analyzed" },
             { number: "93.4%", label: "ML Model Accuracy" }
           ].map((stat, index) => (
             <div 

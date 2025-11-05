@@ -27,6 +27,7 @@ const About = () => {
   const timeline = [
     { year: "2005", event: "Born in India" },
     { year: "2007", event: "Moved to South Africa" },
+    { year: "2018", event: "Selected for provincial cricket" },
     { year: "2020", event: "Lost my father, found purpose in coding" },
     { year: "2022", event: "Breakthrough Junior Challenge Regional Champion" },
     { year: "2023", event: "Top 1% student in South Africa" },
@@ -54,28 +55,33 @@ const About = () => {
           
           <p>
             In 2020, I lost my father. That moment taught me that life is fragile, but purpose is forever. 
-            I channeled my grief into coding, determined to build technology that uplifts others the way 
-            I wish I could have been uplifted.
+            I channeled my grief into coding — determined to build technology that uplifts others the way 
+            I once wished to be uplifted.
           </p>
 
           <p>
-            At an all-boys school in Johannesburg, I learned discipline and humility, graduating in the 
+            Growing up, I poured my heart into cricket, playing at both provincial and club level alongside professional athletes. 
+            The sport taught me focus, teamwork, and the mental toughness to perform under pressure — qualities I now bring into 
+            every project I build. My passion for fitness and strength training keeps me grounded; I believe discipline in the gym 
+            mirrors discipline in life and engineering.
+          </p>
+
+          <p>
+            At an all-boys school in Johannesburg, I learned humility and leadership, graduating in the 
             <span className="text-foreground font-semibold"> top 1% of students in South Africa</span>. 
             I won the Breakthrough Junior Challenge regional championship, earning recognition on national television. 
-            But the real breakthrough was realizing that my skills could serve something bigger than myself.
+            But my real breakthrough was realizing that my skills could serve something greater than myself.
           </p>
 
           <p>
             Today, at the University of Washington, I'm building 
             <span className="text-foreground font-semibold"> OuraNote </span>
-            — an AI mental health journaling app — and 
-            <span className="text-foreground font-semibold"> Finderly </span>
-            — a voice assistant for home repairs. I've helped donate 3,300+ books and rescue 1,200+ animals through 
-            NGO websites I built.
+            — an AI mental health journaling app — and Finderly, an AI DIY app for home repairs. 
+            I've helped donate over 3,300 books and rescue 1,200+ animals through NGO websites I built.
           </p>
 
           <p className="text-foreground font-semibold text-xl pt-4">
-            I don't just code. I create with compassion.
+            I don't just code. I create with compassion, discipline, and purpose.
           </p>
         </div>
 
