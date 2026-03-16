@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,8 +17,21 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (id: string, isPage: boolean = false) => {
+    if (isPage) {
+      navigate(`/${id}`);
+      window.scrollTo(0, 0);
+    } else {
+      if (location.pathname !== '/') {
+        navigate(`/#${id}`);
+        // Small delay to allow navigation to complete before scrolling
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -25,27 +41,26 @@ const Navigation = () => {
     { label: "Experience", id: "experience" },
     { label: "Skills", id: "skills" },
     { label: "Achievements", id: "achievements" },
+    { label: "Certifications", id: "certifications", isPage: true },
     { label: "Contact", id: "contact" }
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border/50" 
-          : "bg-white/10 backdrop-blur-md border-b border-white/20"
-      }`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border/50"
+        : "bg-white/10 backdrop-blur-md border-b border-white/20"
+        }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className={`font-display text-2xl font-bold hover:scale-105 transition-transform ${
-              isScrolled 
-                ? "bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" 
-                : "text-white drop-shadow-lg"
-            }`}
+            className={`font-display text-2xl font-bold hover:scale-105 transition-transform ${isScrolled
+              ? "bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+              : "text-white drop-shadow-lg"
+              }`}
           >
             AK
           </button>
@@ -56,12 +71,11 @@ const Navigation = () => {
               <Button
                 key={link.id}
                 variant="ghost"
-                onClick={() => scrollToSection(link.id)}
-                className={`text-base font-medium transition-all px-4 rounded-lg ${
-                  isScrolled
-                    ? "text-foreground hover:bg-primary/10 hover:text-primary"
-                    : "text-white/90 hover:bg-white/20 hover:text-white drop-shadow-sm"
-                }`}
+                onClick={() => handleNavClick(link.id, link.isPage)}
+                className={`text-base font-medium transition-all px-4 rounded-lg ${isScrolled
+                  ? "text-foreground hover:bg-primary/10 hover:text-primary"
+                  : "text-white/90 hover:bg-white/20 hover:text-white drop-shadow-sm"
+                  }`}
               >
                 {link.label}
               </Button>
@@ -70,13 +84,12 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button 
-              onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya_Kumar_Resume.pdf`, '_blank')}
-              className={`h-11 px-6 font-semibold rounded-lg shadow-lg transition-all ${
-                isScrolled
-                  ? "bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white"
-                  : "bg-white text-primary hover:bg-white/90 hover:shadow-xl"
-              }`}
+            <Button
+              onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya%20Kumar%20Resume.pdf`, '_blank')}
+              className={`h-11 px-6 font-semibold rounded-lg shadow-lg transition-all ${isScrolled
+                ? "bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white"
+                : "bg-white text-primary hover:bg-white/90 hover:shadow-xl"
+                }`}
             >
               Resume
             </Button>
@@ -85,11 +98,10 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled
-                ? "hover:bg-muted text-foreground"
-                : "hover:bg-white/20 text-white"
-            }`}
+            className={`lg:hidden p-2 rounded-lg transition-colors ${isScrolled
+              ? "hover:bg-muted text-foreground"
+              : "hover:bg-white/20 text-white"
+              }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -102,34 +114,31 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className={`lg:hidden pb-6 space-y-2 animate-fade-in border-t pt-4 ${
-            isScrolled 
-              ? "border-border/50" 
-              : "border-white/20"
-          }`}>
+          <div className={`lg:hidden pb-6 space-y-2 animate-fade-in border-t pt-4 ${isScrolled
+            ? "border-border/50"
+            : "border-white/20"
+            }`}>
             {navLinks.map((link) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className={`block w-full text-left px-4 py-3 rounded-lg transition-all font-medium ${
-                  isScrolled
-                    ? "hover:bg-primary/10 hover:text-primary text-foreground"
-                    : "hover:bg-white/20 hover:text-white text-white/90"
-                }`}
+                onClick={() => handleNavClick(link.id, link.isPage)}
+                className={`block w-full text-left px-4 py-3 rounded-lg transition-all font-medium ${isScrolled
+                  ? "hover:bg-primary/10 hover:text-primary text-foreground"
+                  : "hover:bg-white/20 hover:text-white text-white/90"
+                  }`}
               >
                 {link.label}
               </button>
             ))}
-            <Button 
+            <Button
               onClick={() => {
-                window.open('/Aditya_Kumar_Resume.pdf', '_blank');
+                window.open(`${import.meta.env.BASE_URL}Aditya%20Kumar%20Resume.pdf`, '_blank');
                 setIsMobileMenuOpen(false);
               }}
-              className={`w-full mt-4 font-semibold ${
-                isScrolled
-                  ? "bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white"
-                  : "bg-white text-primary hover:bg-white/90"
-              }`}
+              className={`w-full mt-4 font-semibold ${isScrolled
+                ? "bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white"
+                : "bg-white text-primary hover:bg-white/90"
+                }`}
             >
               Download Resume
             </Button>

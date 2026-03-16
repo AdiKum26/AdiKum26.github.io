@@ -7,6 +7,8 @@ import rainbowNationAnimalsImg from "@/assets/rainbow-nation.png";
 import litswapImg from "@/assets/LITSWAP.png";
 import healthMlPredictionImg from "@/assets/dubstech.png";
 import seekrImg from "@/assets/aws.jpg";
+import techfestPresentationImg from "@/assets/techfest-presentation.jpg";
+import travelAgentProductImg from "@/assets/travel-agent-product.png";
 
 const Projects = () => {
   const projects = [
@@ -25,6 +27,21 @@ const Projects = () => {
       github: "https://github.com/OuraNote/mental-health-app",
       demo: "https://www.instagram.com/ouranote/",
       gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Travel AI Agent",
+      description: "End-to-end production-style AI travel assistant",
+      image: travelAgentProductImg,
+      impact: "Presented at Techfest IIT Bombay 2025",
+      tech: ["Next.js", "TypeScript", "Antigravity", "Firebase"],
+      features: [
+        "Agent logic developed using Antigravity",
+        "Real-time recommendations & booking logic",
+        "Clean, responsive UI for production use",
+        "Presented to industry experts at IIT Bombay"
+      ],
+      github: "https://github.com/AdiKum26/TravelAgent",
+      gradient: "from-blue-600 to-indigo-600"
     },
     {
       title: "Finderly",
@@ -118,7 +135,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card 
+            <Card
               key={index}
               className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up border-2 hover:border-primary/50 bg-card/50 backdrop-blur-sm flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -126,14 +143,13 @@ const Projects = () => {
               {/* Project Image/Gradient */}
               <div className={`h-56 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
                 {project.image && (
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
-                    className={`w-full h-full group-hover:scale-110 transition-transform duration-500 ${
-                      project.title === "Finderly" 
-                        ? "object-contain p-8" 
-                        : "object-cover"
-                    }`}
+                    className={`w-full h-full group-hover:scale-110 transition-transform duration-500 ${project.title === "Finderly"
+                      ? "object-contain p-8"
+                      : "object-cover"
+                      }`}
                   />
                 )}
                 {!project.image && (
@@ -160,7 +176,7 @@ const Projects = () => {
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
-                    <span 
+                    <span
                       key={i}
                       className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
                     >
@@ -182,7 +198,7 @@ const Projects = () => {
                 {/* Action Buttons */}
                 <div className="flex gap-2 pt-6 mt-auto">
                   {project.github && (
-                    <Button 
+                    <Button
                       size="sm"
                       variant="outline"
                       className="flex-1"
@@ -193,7 +209,7 @@ const Projects = () => {
                     </Button>
                   )}
                   {project.demo && (
-                    <Button 
+                    <Button
                       size="sm"
                       className="flex-1 bg-gradient-to-r from-primary to-accent hover:opacity-90"
                       onClick={() => window.open(project.demo, '_blank')}
@@ -209,7 +225,7 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
+          <Button
             size="lg"
             variant="outline"
             className="hover:bg-primary hover:text-primary-foreground transition-all duration-300"

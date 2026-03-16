@@ -6,6 +6,8 @@ import dubhacksImg from "@/assets/dubhacks-2025.png";
 import top1Img from "@/assets/st-davids.png";
 import deanListImg from "@/assets/paul-g-allen.jpg";
 import dubstechImg from "@/assets/nyc.jpg";
+import techfestBannerImg from "@/assets/techfest-banner.jpg";
+import techfestCertImg from "@/assets/techfest-certificate.png";
 
 const Achievements = () => {
   const achievements = [
@@ -63,7 +65,7 @@ const Achievements = () => {
     {
       title: "Dean's List - All Quarters",
       subtitle: "University of Washington",
-      description: "Maintained 3.87 GPA while pursuing Computer Science direct admit program at one of the top CS schools in the world.",
+      description: "Maintained 3.83 GPA while pursuing Computer Science direct admit program at one of the top CS schools in the world.",
       image: deanListImg,
       icon: Award,
       gradient: "from-indigo-500 to-purple-500",
@@ -88,26 +90,25 @@ const Achievements = () => {
           {achievements.map((achievement, index) => {
             const Icon = achievement.icon;
             return (
-                <div 
-                  key={index}
-                  className="group relative overflow-hidden rounded-2xl bg-card border-2 border-border hover:border-primary/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up flex flex-col"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl bg-card border-2 border-border hover:border-primary/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up flex flex-col"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 {/* Image or Gradient Background */}
                 {achievement.image ? (
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={achievement.image} 
+                    <img
+                      src={achievement.image}
                       alt={achievement.title}
-                      className={`w-full h-full group-hover:scale-110 transition-transform duration-500 ${
-                        achievement.title === "Top 1% Student in South Africa"
-                          ? "object-contain object-center"
-                          : achievement.title === "MIT Africa Innovation Workshop"
+                      className={`w-full h-full group-hover:scale-110 transition-transform duration-500 ${achievement.title === "Top 1% Student in South Africa"
+                        ? "object-contain object-center"
+                        : achievement.title === "MIT Africa Innovation Workshop"
                           ? "object-cover object-center"
                           : achievement.title === "DubsTech Health ML Hackathon"
-                          ? "object-cover object-[center_50%]"
-                          : "object-cover object-top"
-                      }`}
+                            ? "object-cover object-[center_50%]"
+                            : "object-cover object-top"
+                        }`}
                     />
                     <div className={`absolute top-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br ${achievement.gradient} flex items-center justify-center shadow-lg`}>
                       <Icon className="h-6 w-6 text-white" />
@@ -146,11 +147,10 @@ const Achievements = () => {
                             e.stopPropagation();
                             window.open(button.url, '_blank');
                           }}
-                          className={`${
-                            button.color === "instagram-gradient"
-                              ? "bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 shadow-lg hover:shadow-xl"
-                              : `${button.color} shadow-md hover:shadow-lg`
-                          } text-white font-semibold text-sm py-2.5 px-4 rounded-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
+                          className={`${button.color === "instagram-gradient"
+                            ? "bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 shadow-lg hover:shadow-xl"
+                            : `${button.color} shadow-md hover:shadow-lg`
+                            } text-white font-semibold text-sm py-2.5 px-4 rounded-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
                           {button.label}
@@ -158,26 +158,23 @@ const Achievements = () => {
                       ))}
                     </div>
                   ) : (achievement.link || achievement.newsLink || achievement.linkedinLink || achievement.githubLink) && (
-                    <div className={`flex gap-3 mt-4 ${
-                      (achievement.link && achievement.newsLink) || (achievement.link && achievement.linkedinLink) || (achievement.newsLink && achievement.linkedinLink) || (achievement.linkedinLink && achievement.githubLink) || (achievement.link && achievement.githubLink)
-                        ? 'flex-row'
-                        : 'flex-col'
-                    }`}>
+                    <div className={`flex gap-3 mt-4 ${(achievement.link && achievement.newsLink) || (achievement.link && achievement.linkedinLink) || (achievement.newsLink && achievement.linkedinLink) || (achievement.linkedinLink && achievement.githubLink) || (achievement.link && achievement.githubLink)
+                      ? 'flex-row'
+                      : 'flex-col'
+                      }`}>
                       {achievement.link && (
                         <Button
                           onClick={(e) => {
                             e.stopPropagation();
                             window.open(achievement.link, '_blank');
                           }}
-                          className={`${
-                            achievement.title === "Dean's List - All Quarters"
-                              ? "bg-purple-800 hover:bg-purple-900"
-                              : "bg-red-600 hover:bg-red-700"
-                          } text-white font-semibold ${
-                            (achievement.link && achievement.newsLink) || (achievement.link && achievement.linkedinLink) || (achievement.link && achievement.githubLink)
+                          className={`${achievement.title === "Dean's List - All Quarters"
+                            ? "bg-purple-800 hover:bg-purple-900"
+                            : "bg-red-600 hover:bg-red-700"
+                            } text-white font-semibold ${(achievement.link && achievement.newsLink) || (achievement.link && achievement.linkedinLink) || (achievement.link && achievement.githubLink)
                               ? 'flex-1'
                               : 'w-full'
-                          } py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
+                            } py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
                           {achievement.title === "Dean's List - All Quarters" ? "View" : "YouTube"}
@@ -189,11 +186,10 @@ const Achievements = () => {
                             e.stopPropagation();
                             window.open(achievement.newsLink, '_blank');
                           }}
-                          className={`bg-blue-600 hover:bg-blue-700 text-white font-semibold ${
-                            (achievement.link && achievement.newsLink) || (achievement.newsLink && achievement.linkedinLink) || (achievement.newsLink && achievement.githubLink)
-                              ? 'flex-1'
-                              : 'w-full'
-                          } py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
+                          className={`bg-blue-600 hover:bg-blue-700 text-white font-semibold ${(achievement.link && achievement.newsLink) || (achievement.newsLink && achievement.linkedinLink) || (achievement.newsLink && achievement.githubLink)
+                            ? 'flex-1'
+                            : 'w-full'
+                            } py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
                           eNCA
@@ -205,11 +201,10 @@ const Achievements = () => {
                             e.stopPropagation();
                             window.open(achievement.linkedinLink, '_blank');
                           }}
-                          className={`bg-[#0077b5] hover:bg-[#005885] text-white font-semibold ${
-                            (achievement.link && achievement.linkedinLink) || (achievement.newsLink && achievement.linkedinLink) || (achievement.linkedinLink && achievement.githubLink)
-                              ? 'flex-1'
-                              : 'w-full'
-                          } py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
+                          className={`bg-[#0077b5] hover:bg-[#005885] text-white font-semibold ${(achievement.link && achievement.linkedinLink) || (achievement.newsLink && achievement.linkedinLink) || (achievement.linkedinLink && achievement.githubLink)
+                            ? 'flex-1'
+                            : 'w-full'
+                            } py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 hover:-translate-y-0.5`}
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
                           LinkedIn
@@ -223,11 +218,10 @@ const Achievements = () => {
                             e.stopPropagation();
                             window.open(achievement.githubLink, '_blank');
                           }}
-                          className={`${
-                            (achievement.link && achievement.githubLink) || (achievement.linkedinLink && achievement.githubLink) || (achievement.newsLink && achievement.githubLink)
-                              ? 'flex-1'
-                              : 'w-full'
-                          }`}
+                          className={`${(achievement.link && achievement.githubLink) || (achievement.linkedinLink && achievement.githubLink) || (achievement.newsLink && achievement.githubLink)
+                            ? 'flex-1'
+                            : 'w-full'
+                            }`}
                         >
                           <Github className="mr-2 h-4 w-4" />
                           Code
@@ -249,7 +243,7 @@ const Achievements = () => {
           <h3 className="text-3xl font-bold text-center mb-12 animate-fade-in">
             Creating Real Impact
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -268,7 +262,7 @@ const Achievements = () => {
                 description: "Through leadership & mentorship"
               }
             ].map((impact, index) => (
-              <div 
+              <div
                 key={index}
                 className="text-center p-8 rounded-2xl bg-[var(--gradient-card)] border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}

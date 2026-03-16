@@ -45,7 +45,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className="group p-8 rounded-2xl bg-card border-2 border-border hover:border-primary/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -61,7 +61,7 @@ const Skills = () => {
 
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, i) => (
-                    <span 
+                    <span
                       key={i}
                       className="px-4 py-2 bg-muted rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-default"
                     >
@@ -77,12 +77,12 @@ const Skills = () => {
         {/* Quick Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {[
-            { number: "3.87", label: "GPA (Dean's List)" },
+            { number: "3.83", label: "GPA (Dean's List)" },
             { number: "5K+", label: "App Downloads" },
             { number: "2M+", label: "Records Analyzed" },
             { number: "93.4%", label: "ML Model Accuracy" }
           ].map((stat, index) => (
-            <div 
+            <div
               key={index}
               className="text-center p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}

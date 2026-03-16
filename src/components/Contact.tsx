@@ -87,12 +87,12 @@ const Contact = () => {
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold">Get in Touch</h3>
-              
+
               <div className="space-y-4">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon;
                   return (
-                    <div 
+                    <div
                       key={index}
                       className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                     >
@@ -102,7 +102,7 @@ const Contact = () => {
                       <div>
                         <div className="text-sm text-muted-foreground mb-1">{info.label}</div>
                         {info.link ? (
-                          <a 
+                          <a
                             href={info.link}
                             className="font-semibold hover:text-primary transition-colors"
                           >
@@ -151,9 +151,9 @@ const Contact = () => {
               <p className="text-muted-foreground mb-4">
                 Download my resume for detailed information about my experience and projects.
               </p>
-              <Button 
+              <Button
                 className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90"
-                onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya_Kumar_Resume.pdf`, '_blank')}
+                onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya%20Kumar%20Resume.pdf`, '_blank')}
               >
                 <Send className="mr-2 h-5 w-5" />
                 Download Resume
@@ -208,7 +208,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button 
+              <Button
                 type="submit"
                 size="lg"
                 className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all duration-300 hover:shadow-lg"
@@ -237,7 +237,7 @@ const Contact = () => {
 
 const Heart = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
   </svg>
 );
 

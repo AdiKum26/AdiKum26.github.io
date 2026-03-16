@@ -3,10 +3,46 @@ import { Briefcase, MapPin, Calendar } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
+      company: "Paul G. Allen School of CSE",
+      role: "Undergraduate Researcher – Agentic AI Systems",
+      location: "Seattle, Washington",
+      period: "Jan 2026 - Present",
+      achievements: [
+        "Automating evaluation and testing of multi-agent LLM systems for personalized AI assistants",
+        "Implementing LLM-as-a-judge frameworks grounded in formal failure taxonomies (MAST)",
+        "Designing automated pipelines to analyze agent execution logs and detect failure modes at scale",
+        "Studying failures related to specification issues, inter-agent misalignment, and task verification"
+      ],
+      color: "from-indigo-600 to-blue-600"
+    },
+    {
+      company: "LinkedIn",
+      role: "Software Engineering Intern",
+      location: "Mountain View, California",
+      period: "Incoming Summer 2026",
+      achievements: [
+        "Selected for the LinkedIn First Play Program in Mountain View",
+        "Incoming intern focused on building meaningful products and scalable software solutions"
+      ],
+      color: "from-[#0077b5] to-[#00a0dc]"
+    },
+    {
+      company: "Amazon",
+      role: "Junior Software Developer",
+      location: "Seattle, Washington",
+      period: "Incoming Summer 2026",
+      periodColor: "bg-[#FF9900] text-white font-bold",
+      achievements: [
+        "Part of the Junior Developer Program working on the Kindle Reader Team",
+        "Contributing to core reader features and performance optimizations during the school year"
+      ],
+      color: "from-[#FF9900] to-[#232f3e]"
+    },
+    {
       company: "AI Vision Technologies (Finderly)",
       role: "AI Software Engineer Intern",
       location: "Austin, Texas (Remote)",
-      period: "Oct 2025 - Present",
+      period: "Oct 2025 - Jan 2026",
       achievements: [
         "Developing AI DIY home-repair app with 5,000+ downloads and rapidly growing user base",
         "Building real-time conversational AI assistant (Whisper + GPT + TTS) for hands-free repair guidance",
@@ -67,7 +103,7 @@ const Experience = () => {
 
         <div className="max-w-5xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
-            <div 
+            <div
               key={index}
               className="group relative animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -83,7 +119,7 @@ const Experience = () => {
 
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div className="flex-1">
-                    <div className={`inline-block px-4 py-1 rounded-full bg-gradient-to-r ${exp.color} mb-3`}>
+                    <div className={`inline-block px-4 py-1 rounded-full ${exp.periodColor || `bg-gradient-to-r ${exp.color}`} mb-3`}>
                       <span className="text-sm font-semibold text-white">
                         {exp.period}
                       </span>
@@ -106,7 +142,7 @@ const Experience = () => {
 
                 <ul className="space-y-3">
                   {exp.achievements.map((achievement, i) => (
-                    <li 
+                    <li
                       key={i}
                       className="flex items-start gap-3 text-muted-foreground group-hover:text-foreground transition-colors"
                     >
@@ -125,7 +161,7 @@ const Experience = () => {
           <h3 className="text-3xl font-bold text-center mb-12 animate-fade-in">
             Leadership & Community
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -146,7 +182,7 @@ const Experience = () => {
                 description: "Selected for global leadership & AI innovation program"
               }
             ].map((leadership, index) => (
-              <div 
+              <div
                 key={index}
                 className="p-6 rounded-xl bg-[var(--gradient-card)] border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}

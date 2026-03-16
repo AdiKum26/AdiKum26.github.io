@@ -32,7 +32,8 @@ const About = () => {
     { year: "2022", event: "Breakthrough Junior Challenge Regional Champion" },
     { year: "2023", event: "Top 1% student in South Africa" },
     { year: "2024", event: "Direct admit to UW Computer Science" },
-    { year: "2025", event: "Building OuraNote & Finderly, changing lives" }
+    { year: "2025", event: "Building OuraNote & Finderly, changing lives" },
+    { year: "2026", event: "AI Systems Researcher at Paul G. Allen School | Incoming SWE at LinkedIn & Amazon" }
   ];
 
   return (
@@ -48,36 +49,44 @@ const About = () => {
         {/* Story Section */}
         <div className="max-w-4xl mx-auto mb-20 space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-in-up">
           <p>
-            I was born in India, raised in South Africa, and now call Seattle home. My journey has been shaped by 
+            I was born in India, raised in South Africa, and now call Seattle home. My journey has been shaped by
             <span className="text-foreground font-semibold"> Ubuntu </span>
             — the belief that "I am because we are."
           </p>
-          
+
           <p>
-            In 2021, I lost my father. That moment taught me that life is fragile, but purpose is forever. 
-            I channeled my grief into coding — determined to build technology that uplifts others the way 
+            In 2021, I lost my father. That moment taught me that life is fragile, but purpose is forever.
+            I channeled my grief into coding — determined to build technology that uplifts others the way
             I once wished to be uplifted.
           </p>
 
           <p>
-            Growing up, I poured my heart into cricket, playing at both provincial and club level alongside professional athletes. 
-            The sport taught me focus, teamwork, and the mental toughness to perform under pressure — qualities I now bring into 
-            every project I build. My passion for fitness and strength training keeps me grounded; I believe discipline in the gym 
+            Growing up, I poured my heart into cricket, playing at both provincial and club level alongside professional athletes.
+            The sport taught me focus, teamwork, and the mental toughness to perform under pressure — qualities I now bring into
+            every project I build. My passion for fitness and strength training keeps me grounded; I believe discipline in the gym
             mirrors discipline in life and engineering.
           </p>
 
           <p>
-            At an all-boys school in Johannesburg, I learned humility and leadership, graduating in the 
-            <span className="text-foreground font-semibold"> top 1% of students in South Africa</span>. 
-            I won the Breakthrough Junior Challenge regional championship, earning recognition on national television. 
+            At an all-boys school in Johannesburg, I learned humility and leadership, graduating in the
+            <span className="text-foreground font-semibold"> top 1% of students in South Africa</span>.
+            I won the Breakthrough Junior Challenge regional championship, earning recognition on national television.
             But my real breakthrough was realizing that my skills could serve something greater than myself.
           </p>
 
           <p>
-            Today, at the University of Washington, I'm building 
+            Today, at the University of Washington, I'm building
             <span className="text-foreground font-semibold"> OuraNote </span>
-            — an AI mental health journaling app — and Finderly, an AI DIY app for home repairs. 
+            — an AI mental health journaling app — and Finderly, an AI DIY app for home repairs.
             I've helped donate over 3,300 books and rescue 1,200+ animals through NGO websites I built.
+          </p>
+
+          <p>
+            Looking ahead to 2026, I'm honored to be continuing my research in Agentic AI at the
+            <span className="text-foreground font-semibold"> Paul G. Allen School </span>
+            while preparing for my software engineering roles at
+            <span className="text-foreground font-semibold"> LinkedIn and Amazon</span>.
+            My goal remains the same: to build systems that aren't just intelligent, but meaningful.
           </p>
 
           <p className="text-foreground font-semibold text-xl pt-4">
@@ -90,7 +99,7 @@ const About = () => {
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className="p-6 rounded-2xl bg-[var(--gradient-card)] border border-border hover:shadow-[var(--shadow-elegant)] transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -111,15 +120,14 @@ const About = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary via-accent to-secondary rounded-full" />
-            
+
             {/* Timeline Items */}
             <div className="space-y-12">
               {timeline.map((item, index) => (
-                <div 
+                <div
                   key={index}
-                  className={`flex items-center gap-8 animate-fade-in-up ${
-                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                  }`}
+                  className={`flex items-center gap-8 animate-fade-in-up ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                    }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
@@ -128,9 +136,9 @@ const About = () => {
                       <div className="text-foreground">{item.event}</div>
                     </div>
                   </div>
-                  
+
                   <div className="relative z-10 w-4 h-4 rounded-full bg-white border-4 border-primary shadow-lg" />
-                  
+
                   <div className="flex-1" />
                 </div>
               ))}

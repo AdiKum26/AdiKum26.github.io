@@ -28,28 +28,28 @@ const Hero = () => {
                 Hi, I'm
               </span>
             </div>
-            
+
             <div className="space-y-4">
               <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] tracking-tight drop-shadow-2xl">
-                Aditya<br/>Kumar
+                Aditya<br />Kumar
               </h1>
               <div className="space-y-3">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white drop-shadow-lg leading-tight">
-                  Developer, Innovator<br/>& Storyteller
+                  Agentic AI Researcher,<br />Developer & Storyteller
                 </h2>
                 <p className="text-lg md:text-xl text-white/95 max-w-xl leading-relaxed drop-shadow-md">
                   Building apps that make life better — from mental health platforms to real-time AI assistants
                 </p>
               </div>
             </div>
-            
+
             <p className="text-base md:text-lg text-white/70 max-w-xl leading-relaxed">
               CS student at University of Washington, passionate about creating technology that uplifts communities and solves real problems.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
-              <Button 
+              <Button
                 size="lg"
                 className="h-14 px-8 bg-white text-primary hover:bg-white/90 font-semibold text-base shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-xl"
                 onClick={() => window.open('https://github.com/AdiKum26', '_blank')}
@@ -57,7 +57,7 @@ const Hero = () => {
                 <Github className="mr-2 h-5 w-5" />
                 View My Work
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
                 className="h-14 px-8 bg-transparent text-white border-2 border-white/30 hover:bg-white/10 hover:border-white font-semibold text-base shadow-xl backdrop-blur-sm rounded-xl"
@@ -70,25 +70,25 @@ const Hero = () => {
 
             {/* Social Links */}
             <div className="flex gap-3 pt-2">
-              <a 
-                href="https://github.com/AdiKum26" 
-                target="_blank" 
+              <a
+                href="https://github.com/AdiKum26"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="group p-4 bg-white/10 hover:bg-white/20 rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-110 border border-white/10 hover:border-white/30"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5 text-white" />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/aditya-kumar05/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/aditya-kumar05/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="group p-4 bg-white/10 hover:bg-white/20 rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-110 border border-white/10 hover:border-white/30"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5 text-white" />
               </a>
-              <a 
+              <a
                 href="mailto:adikum26@uw.edu"
                 className="group p-4 bg-white/10 hover:bg-white/20 rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-110 border border-white/10 hover:border-white/30"
                 aria-label="Email"
@@ -103,9 +103,9 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-secondary/30 rounded-full blur-3xl animate-glow" />
               <div className="relative">
-                <img 
-                  src={profileImage} 
-                  alt="Aditya Kumar" 
+                <img
+                  src={profileImage}
+                  alt="Aditya Kumar"
                   className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-full object-cover border-4 border-white/20 shadow-2xl"
                 />
                 <div className="absolute inset-0 rounded-full ring-2 ring-white/10 ring-offset-8 ring-offset-transparent" />
@@ -116,7 +116,7 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <button 
+          <button
             onClick={() => scrollToSection('about')}
             className="p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all duration-300 border border-white/20 hover:border-white/40"
             aria-label="Scroll to about section"
