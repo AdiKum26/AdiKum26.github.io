@@ -1,74 +1,69 @@
-# Welcome to your Lovable project
+# Aditya Kumar — Personal Website & Portfolio
 
-## Project info
+Welcome to the repository of my personal website! This project is a curated showcase of my journey as a computer science student at the **University of Washington**, a researcher in **Agentic AI**, and an incoming software engineer at **LinkedIn** and **Amazon**.
 
-**URL**: https://lovable.dev/projects/7b0a2efd-c74a-41b4-b534-46900c3685ac
+Built with a focus on premium aesthetics and dynamic user experience, this site reflects my philosophy: **"I create with compassion, discipline, and purpose."**
 
-## How can I edit this code?
+## 🚀 Key Highlights
 
-There are several ways of editing your application.
+- **Journey 2026**: Showcasing my upcoming research as an AI Systems Researcher at the Paul G. Allen School and my future software engineering internships.
+- **Featured Projects**: Highlights production-ready applications like **Travel AI Agent**, **OuraNote**, and **Finderly**.
+- **Agentic AI Research**: Dedicated sections outlining my work in automated evaluation and failure taxonomies for multi-agent LLM systems.
+- **Professional Credentials**: A dedicated certifications hub and high-resolution resume management.
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7b0a2efd-c74a-41b4-b534-46900c3685ac) and start prompting.
+This website is built using modern, industry-standard technologies:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [GitHub Pages](https://pages.github.com/) (configured for root domain)
 
-**Use your preferred IDE**
+## 📁 Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```text
+├── public/                # Static assets (Resume, icons)
+├── src/
+│   ├── assets/           # Project images and graphics
+│   ├── components/       # Reusable React components (Hero, Experience, Projects)
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and shared libraries
+│   ├── pages/            # Page-level components (Index, Certifications)
+│   └── App.tsx           # Main application routing and structure
+└── tailwind.config.ts    # Custom theme and design system configuration
 ```
 
-**Edit a file directly in GitHub**
+## ⚙️ Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+If you want to run this project locally:
 
-**Use GitHub Codespaces**
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/AdiKum26/AdiKum26.github.io.git
+   cd AdiKum26.github.io
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. **Install dependencies**:
+   ```sh
+   npm install
+   ```
 
-## What technologies are used for this project?
+3. **Start the development server**:
+   ```sh
+   npm run dev
+   ```
 
-This project is built with:
+## 📬 Let's Connect
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+I'm always open to discussing new opportunities or collaborating on impactful AI projects.
 
-## How can I deploy this project?
+- **LinkedIn**: [aditya-kumar05](https://www.linkedin.com/in/aditya-kumar05/)
+- **GitHub**: [AdiKum26](https://github.com/AdiKum26)
+- **Instagram (OuraNote)**: [@ouranote](https://www.instagram.com/ouranote/)
 
-Simply open [Lovable](https://lovable.dev/projects/7b0a2efd-c74a-41b4-b534-46900c3685ac) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-# Deployment configuration updated for root domain
+*Built with passion and purpose by Aditya Kumar.*
