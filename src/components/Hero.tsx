@@ -1,15 +1,19 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ArrowDown, Briefcase } from "lucide-react";
 import profileImage from "@/assets/aditya-profile.jpg";
+import { useInView } from "@/hooks/useInView";
 
 const Hero = () => {
+  const { ref, inView } = useInView({ threshold: 0.1 });
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background - Darker for better contrast */}
+      {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-secondary opacity-95" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
       <div className="absolute inset-0">
@@ -18,14 +22,19 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-16 md:py-20">
+      <div ref={ref} className="relative z-10 container mx-auto px-6 py-16 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
-          <div className="space-y-8 animate-fade-in order-2 lg:order-1">
-            <div className="inline-block">
+          <div className={`space-y-8 order-2 lg:order-1 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            {/* Available badge */}
+            <div className="flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium text-sm border border-white/20">
                 <span className="animate-pulse">👋</span>
                 Hi, I'm
+              </span>
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-400/20 backdrop-blur-sm rounded-full text-green-300 font-medium text-sm border border-green-400/30">
+                <Briefcase className="h-3.5 w-3.5" />
+                Open to Full-time Roles (2028)
               </span>
             </div>
 
@@ -61,7 +70,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="h-14 px-8 bg-transparent text-white border-2 border-white/30 hover:bg-white/10 hover:border-white font-semibold text-base shadow-xl backdrop-blur-sm rounded-xl"
-                onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya_Kumar_Resume.pdf`, '_blank')}
+                onClick={() => window.open(`${import.meta.env.BASE_URL}resume.pdf`, '_blank')}
               >
                 <Download className="mr-2 h-5 w-5" />
                 Resume
@@ -99,7 +108,7 @@ const Hero = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end animate-fade-in order-1 lg:order-2" style={{ animationDelay: '0.2s' }}>
+          <div className={`flex justify-center lg:justify-end order-1 lg:order-2 transition-all duration-700 delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="relative">
               <div className="absolute inset-0 bg-secondary/30 rounded-full blur-3xl animate-glow" />
               <div className="relative">
