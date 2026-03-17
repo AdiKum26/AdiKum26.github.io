@@ -33,7 +33,7 @@ const Experience = () => {
       period: "Incoming Summer 2026",
       periodColor: "bg-[#FF9900] text-white font-bold",
       achievements: [
-        "Part of the Junior Developer Program working on the Kindle Reader Team",
+        "Part of the Junior Developer Program working on the Kindle IBEX Team",
         "Contributing to core reader features and performance optimizations during the school year"
       ],
       color: "from-[#FF9900] to-[#232f3e]"
