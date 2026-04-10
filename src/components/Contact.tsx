@@ -136,7 +136,7 @@ const Contact = () => {
             <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
               <h3 className="text-xl font-bold mb-2">Want to know more?</h3>
               <p className="text-muted-foreground mb-4">Download my resume for detailed information about my experience and projects.</p>
-              <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90" onClick={() => window.open(`${import.meta.env.BASE_URL}resume.pdf`, '_blank')}>
+              <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90" onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya%20Kumar%20Resume.pdf`, '_blank')}>
                 <Send className="mr-2 h-5 w-5" />
                 Download Resume
               </Button>
