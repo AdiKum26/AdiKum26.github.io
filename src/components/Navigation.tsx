@@ -135,7 +135,7 @@ const Navigation = () => {
             </button>
 
             <Button
-              onClick={() => window.open(`${import.meta.env.BASE_URL}resume.pdf`, '_blank')}
+              onClick={() => window.open(`${import.meta.env.BASE_URL}Aditya%20Kumar%20Resume.pdf`, '_blank')}
               className={`h-11 px-6 font-semibold rounded-lg shadow-lg transition-all ${isScrolled
                 ? "bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white"
                 : "bg-white text-primary hover:bg-white/90 hover:shadow-xl"
@@ -201,7 +201,7 @@ const Navigation = () => {
             })}
             <Button
               onClick={() => {
-                window.open(`${import.meta.env.BASE_URL}resume.pdf`, '_blank');
+                window.open(`${import.meta.env.BASE_URL}Aditya%20Kumar%20Resume.pdf`, '_blank');
                 setIsMobileMenuOpen(false);
               }}
               className={`w-full mt-4 font-semibold ${isScrolled
