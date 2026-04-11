@@ -7,6 +7,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Aditya Kumar | Agentic AI Researcher & Software Engineer</title>
+    <script>
+      (function() {
+        var stored = localStorage.getItem('theme');
+        var isDark;
+        if (stored === 'dark') {
+          isDark = true;
+        } else if (stored === 'light') {
+          isDark = false;
+        } else {
+          // No saved preference: use system preference, fall back to dark
+          isDark = !window.matchMedia || !window.matchMedia('(prefers-color-scheme: light)').matches;
+        }
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <meta name="description" content="Aditya Kumar — Agentic AI Researcher at UW's Paul G. Allen School, incoming SWE at LinkedIn & Amazon. Building AI tools that make life better." />
     <meta name="author" content="Aditya Kumar" />
     <meta name="keywords" content="Aditya Kumar, Software Engineer, Agentic AI, AI Researcher, University of Washington, Computer Science, OuraNote, Finderly, Full-Stack Developer, LinkedIn, Amazon" />
