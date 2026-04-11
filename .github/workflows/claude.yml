@@ -23,12 +23,15 @@ jobs:
       pull-requests: read
       issues: read
       id-token: write
-      actions: read # Required for Claude to read CI results on PRs
+      actions: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
+      - name: Install Playwright dependencies
+        run: npx playwright install --with-deps chromium
 
       - name: Project Setup
         run: |
@@ -42,7 +45,6 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
-          # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
             actions: read
 
@@ -53,8 +55,9 @@ jobs:
                   "command": "npx",
                   "args": [
                     "@playwright/mcp@latest",
+                    "--headless",
                     "--allowed-origins",
-                    "localhost:3000;cdn.tailwindcss.com;esm.sh"
+                    "localhost:8080;cdn.tailwindcss.com;esm.sh"
                   ]
                 }
               }
