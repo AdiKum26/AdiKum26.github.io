@@ -12,11 +12,10 @@ npm run lint       # ESLint
 npm run preview    # Preview the production build locally
 ```
 
-There are no automated tests in this project. After every feature or change, use the Playwright MCP to verify correctness:
+There are no automated tests in this project. After every feature or change, verify correctness by running:
 
-1. Start the dev server: `npm run dev`
-2. Use the Playwright MCP to navigate to `http://localhost:5173` and exercise the changed functionality — check that elements render, animations trigger on scroll, links resolve, and forms behave correctly.
-3. For route changes, also verify `/certifications` and that unknown paths show the 404 page.
+1. `npm run build` — must succeed with no errors before committing any changes.
+2. `npm run lint` — fix any lint errors introduced by the change.
 
 ## Architecture
 
