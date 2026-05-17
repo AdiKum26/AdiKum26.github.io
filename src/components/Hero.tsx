@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download, ArrowDown, Briefcase } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
 import profileImage from "@/assets/aditya-profile.jpg";
 import { useInView } from "@/hooks/useInView";
 
@@ -31,10 +31,6 @@ const Hero = () => {
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium text-sm border border-white/20">
                 <span className="animate-pulse">👋</span>
                 Hi, I'm
-              </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-400/20 backdrop-blur-sm rounded-full text-green-300 font-medium text-sm border border-green-400/30">
-                <Briefcase className="h-3.5 w-3.5" />
-                Open to Full-time Roles (2028)
               </span>
             </div>
 
